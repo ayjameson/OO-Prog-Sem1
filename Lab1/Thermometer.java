@@ -25,3 +25,4 @@ public class Thermometer
 		return celsius;
 	}
 } // end class Thermometer
+
