@@ -50,4 +50,12 @@ public class HotelRoom
     {
         this.roomRate = roomRate;
     }
+
+    public void setAll(int roomNumber, String roomType, int vacancyStatus, double roomRate)
+    {
+        this.roomNumber = roomNumber;
+        this.roomType = roomType;
+        this.vacancyStatus = vacancyStatus;
+        this.roomRate = roomRate;
+    }
 }

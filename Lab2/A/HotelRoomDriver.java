@@ -5,6 +5,7 @@ public class HotelRoomDriver
     {
         HotelRoom roomA = new HotelRoom();  //creating objects
         HotelRoom roomB = new HotelRoom();
+        HotelRoom roomC = new HotelRoom();
 
         roomA.setRoomNumber(200);   //setting values for the objects
         roomA.setRoomType("Single");
@@ -14,6 +15,7 @@ public class HotelRoomDriver
         roomB.setRoomType("Double");
         roomB.setVacancyStatus(0); 
         roomB.setRoomRate(80.0);
+        roomC.setAll(202, "Single", 0, 90);
 
         System.out.println("Room A number : " + roomA.getRoomNumber());
         System.out.println("Room B number : " + roomB.getRoomNumber());
@@ -23,6 +25,7 @@ public class HotelRoomDriver
         System.out.println("Room B vacancy status : " + roomB.getVacancyStatus());
         System.out.println("Room A rate : " + roomA.getRoomRate());
         System.out.println("Room B rate : " + roomB.getRoomRate());
+        System.out.println("Room C : " + roomC);    //not returning proper value fix this
     }
 }
     
