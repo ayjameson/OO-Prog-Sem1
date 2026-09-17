@@ -1,3 +1,4 @@
+package Lab2.A;
 public class HotelRoom
 {
         private int roomNumber;

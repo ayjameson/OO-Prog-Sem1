@@ -1,11 +1,12 @@
+package Lab2.A; //was getting err in vsc for no package
 public class HotelRoomDriver 
 {
     public static void main(String[] args)
     {
-        HotelRoom roomA = new HotelRoom();
+        HotelRoom roomA = new HotelRoom();  //creating objects
         HotelRoom roomB = new HotelRoom();
 
-        roomA.setRoomNumber(200);
+        roomA.setRoomNumber(200);   //setting values for the objects
         roomA.setRoomType("Single");
         roomB.setRoomNumber(201);
         roomB.setRoomType("Double");
@@ -16,3 +17,4 @@ public class HotelRoomDriver
         System.out.println("Room B type : " + roomB.getRoomType());
     }
 }
+    
