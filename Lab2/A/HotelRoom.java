@@ -2,8 +2,10 @@ package Lab2.A;
 public class HotelRoom
 {
         private int roomNumber;
-        private String roomType;
-        
+        private String roomType;    //Single or Double
+        private int vacancyStatus; // 0 for vacant, 1 for occupied
+        private double roomRate;   // nightly rate
+
         public HotelRoom()
         {
 
@@ -27,5 +29,25 @@ public class HotelRoom
     public void setRoomType(String roomType)
     {
         this.roomType = roomType;
+    }
+
+    public int getVacancyStatus()
+    {
+        return vacancyStatus;
+    }
+
+    public void setVacancyStatus(int vacancyStatus)
+    {
+        this.vacancyStatus = vacancyStatus;
+    }
+
+    public double getRoomRate()
+    {
+        return roomRate;
+    }
+
+    public void setRoomRate(double roomRate)
+    {
+        this.roomRate = roomRate;
     }
 }
