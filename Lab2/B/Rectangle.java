@@ -1,7 +1,7 @@
 public class Rectangle 
 {
-    private double length;
-    private double width;
+    private int length;
+    private int width;
 
     public Rectangle()
     {
@@ -9,28 +9,28 @@ public class Rectangle
         width = 1;
     }
 
-    public Rectangle(double length, double width)
+    public Rectangle(int length, int width)
     {
         this.length = length;
         this.width = width;
     }
 
-    public double getLength()
+    public int getLength()
     {
         return length;
     }
 
-    public void setLength(double length)
+    public void setLength(int length)
     {
         this.length = length;
     }
 
-    public double getWidth()
+    public int getWidth()
     {
         return width;
     }
 
-    public void setWidth(double width)
+    public void setWidth(int width)
     {
         this.width = width;
     }
@@ -38,5 +38,37 @@ public class Rectangle
     public String toString()
     {
         return "Length: " + length + ", Width: " + width;
+    }
+
+    public int getArea()
+    {
+        return length * width;
+    }
+
+    public int getPerimeter()
+    {
+        return 2 * (length + width);
+    }
+
+    public void printRectangle()
+    {
+        int rows = this.length;
+        int cols = this.width;
+
+        for(int i = 0; i < rows; i++)
+        {
+            for(int j = 0; j < cols; j++)   //this took way too long for my brain
+            {
+                if(i == 0 || i == rows - 1 || j == 0 || j == cols - 1) //checking if * lines up with rectangle
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println(""); // move to next row
+        }
     }
 }
