@@ -1,4 +1,3 @@
-package Lab2.A;
 public class HotelRoom
 {
         private int roomNumber;
@@ -57,5 +56,37 @@ public class HotelRoom
         this.roomType = roomType;
         this.vacancyStatus = vacancyStatus;
         this.roomRate = roomRate;
+    }
+
+    public boolean isOccupied()
+    {
+        if (vacancyStatus == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void setOccupied()
+    {   
+        if(this.isOccupied()==true)
+        {
+            System.out.println("Room is already occupied");
+        }
+        else
+        {
+            this.vacancyStatus = 1;
+            System.out.println("Room is now occupied");
+        }
+    }
+
+    public String toString()
+    {
+        String theString;
+        theString = this.roomNumber+" "+this.roomType+" "+this.vacancyStatus+" "+this.roomRate;
+        return theString;
     }
 }

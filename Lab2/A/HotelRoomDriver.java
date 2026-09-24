@@ -1,4 +1,3 @@
-package Lab2.A; //was getting err in vsc for no package
 public class HotelRoomDriver 
 {
     public static void main(String[] args)
@@ -16,6 +15,8 @@ public class HotelRoomDriver
         roomB.setVacancyStatus(0); 
         roomB.setRoomRate(80.0);
         roomC.setAll(202, "Single", 0, 90);
+        roomB.setOccupied();    //setting room B to occupied twice to test the setOccupied method
+        roomB.setOccupied();
 
         System.out.println("Room A number : " + roomA.getRoomNumber());
         System.out.println("Room B number : " + roomB.getRoomNumber());
@@ -25,7 +26,7 @@ public class HotelRoomDriver
         System.out.println("Room B vacancy status : " + roomB.getVacancyStatus());
         System.out.println("Room A rate : " + roomA.getRoomRate());
         System.out.println("Room B rate : " + roomB.getRoomRate());
-        System.out.println("Room C : " + roomC);    //not returning proper value fix this
+        System.out.println("Room C : " + roomC.toString());  //not returning proper value fix this
     }
 }
     
