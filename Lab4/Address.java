@@ -13,6 +13,36 @@ public class Address
         this.county = county;
     }
 
+    public String getStreet()
+    {
+        return this.street;
+    }
+
+    public void setStreet(String street)
+    {
+        this.street = street;
+    }
+
+    public String getCityOrTown()
+    {
+        return this.cityOrTown;
+    }
+
+    public void setCityOrTown(String cityOrTown)
+    {
+        this.cityOrTown = cityOrTown;
+    }
+
+    public String getCounty()
+    {
+        return this.county;
+    }
+
+    public void setCounty(String county)
+    {
+        this.county = county;
+    }
+
     public String toString()
     {
         String fullAddress;

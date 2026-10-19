@@ -2,38 +2,97 @@ package Lab4;
 
 public class Employee
 {
-    // TODO: A CompanyCar is only needed for employees whose type is "Manager";
-    // staff employees should not have one.
     static int nextEmployeeNum = 1000;
+    static int numberOfEmployees = 0;
     private int employeeNum;
     private String fname;
     private String lname;
     private Address address;
     private String type;               
-    private Office assignedOffice;
-    private CompanyCar assignedCar;
-    // TODO: Add a static field to track the number of employee records.
+    private String assignedCar;
 
-    public Employee(String fname, String lname, Address address, String employeeType, Office office)
+    public Employee(String fname, String lname, Address address, String employeeType)
     {
-        // TODO: Assign an employee number and initialize this employee's details.
-        // Keep companyCar for managers; leave it absent for staff employees.
         this.fname = fname;
         this.lname = lname;
-        this.employeeNum += nextEmployeeNum;
+        this.employeeNum = nextEmployeeNum;
         this.address = address;
         this.type = employeeType;
-        this.assignedOffice = office;
+        nextEmployeeNum++;
+        numberOfEmployees++;
+    }
+
+    public int getNumberOfEmployee()
+    {
+        return this.employeeNum;
     }
 
     public static int getNumberOfEmployees()
     {
-        return (employeeNum - 1000);
+        return numberOfEmployees;
+    }
+
+    public String getFname()
+    {
+        return this.fname;
+    }
+
+    public void setFname(String fname)
+    {
+        this.fname = fname;
+    }
+
+    public String getLname()
+    {
+        return this.lname;
+    }
+
+    public void setLname(String lname)
+    {
+        this.lname = lname;
+    }
+
+    public Address getAddress()
+    {
+        return this.address;
+    }
+
+    public void setAddress(Address address)
+    {
+        this.address = address;
+    }
+
+    public String getType()
+    {
+        return this.type;
+    }
+
+    public void setType(String type)
+    {
+        this.type = type;
+    }
+
+    public String getAssignedCar()
+    {
+        return this.assignedCar;
+    }
+
+    public void setAssignedCar(String assignedCar)
+    {
+        this.assignedCar = assignedCar;
     }
 
     public String toString()
     {
-        // TODO: Return a readable summary of this employee.
-        return "";
+        if(type.equalsIgnoreCase("Manager"))
+        {
+            return "Employee [First Name = " + fname + ", Last Name = " + lname + " Address = " + address + ", Employee Number = " + employeeNum
+            + ", Employee Type = " + type + "Company Car = " + assignedCar + "]";
+        }
+        else
+        {
+            return "Employee [First Name = " + fname + ", Last Name = " + lname + " Address = " + address + ", Employee Number = " + employeeNum
+            + "Employee Type = " + type + "]";
+        }
     }
 }

@@ -30,7 +30,6 @@ public class Office
 
     public Employee getEmployee(int index)
     {
-        // TODO: Return the employee record at the requested index.
         return this.employees[index];
     }
 
@@ -54,7 +53,6 @@ public class Office
 
     public String toString()
     {
-        // TODO: Return a readable summary of this office.
-        return "";
+        return "Office [Office Number = " + roomNumber + "]";
     }
 }
