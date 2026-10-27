@@ -3,7 +3,7 @@ public class Point
     private int x;
     private int y;
 
-public Point()
+public Point()              //no explicit constructor, so default constuctor was needed
     {
         this.x = 0;
         this.y = 0;
