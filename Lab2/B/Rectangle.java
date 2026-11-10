@@ -1,3 +1,4 @@
+package Lab2.B;
 public class Rectangle 
 {
     private int length;

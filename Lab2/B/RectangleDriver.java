@@ -1,3 +1,4 @@
+package Lab2.B;
 public class RectangleDriver 
 {
         public static void main(String[] args) {

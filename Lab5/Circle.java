@@ -1,3 +1,4 @@
+package Lab5;
 public class Circle extends Point
 {
     private int radius;

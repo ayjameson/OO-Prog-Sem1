@@ -1,3 +1,4 @@
+package Lab5;
 public class Point
 {
     private int x;
